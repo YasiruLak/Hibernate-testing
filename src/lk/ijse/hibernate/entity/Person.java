@@ -6,8 +6,8 @@ import javax.persistence.Id;
 @Entity(name = "person")
 public class Person {
     @Id
-    String pId;
-    String name;
+    private String pId;
+    private String name;
 
     public Person() {
     }

@@ -1,9 +1,6 @@
 package lk.ijse.hibernate.utill;
 
-import lk.ijse.hibernate.entity.Animal;
-import lk.ijse.hibernate.entity.Customer;
-import lk.ijse.hibernate.entity.Passport;
-import lk.ijse.hibernate.entity.Person;
+import lk.ijse.hibernate.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -15,8 +12,8 @@ public class FactoryConfiguration {
 
     private FactoryConfiguration() {
         Configuration configuration = new Configuration().configure()
-                .addAnnotatedClass(Person.class)
-                .addAnnotatedClass(Passport.class);
+                .addAnnotatedClass(Owner.class)
+                .addAnnotatedClass(Pet.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

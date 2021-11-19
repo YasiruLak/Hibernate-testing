@@ -7,10 +7,10 @@ import javax.persistence.Id;
 public class Customer {
 
     @Id
-    String id;
-    String name;
-    String address;
-    double salary;
+    private String id;
+    private String name;
+    private String address;
+    private double salary;
 
     public Customer() {
     }
