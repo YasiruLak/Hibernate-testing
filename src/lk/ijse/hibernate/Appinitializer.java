@@ -25,6 +25,12 @@ public class Appinitializer {
         owner.getPetList().add(pet);
         owner.getPetList().add(pet2);
 
+        //2nd method
+       /* List<Pet> petList =  new ArrayList<>();
+        petList.add(pet1);
+        petList.add(pet2);
+        owner.setPetList(petList);*/
+
         pet.setOwner(owner);
         pet2.setOwner(owner);
 
