@@ -12,8 +12,10 @@ public class FactoryConfiguration {
 
     private FactoryConfiguration() {
         Configuration configuration = new Configuration().configure()
-                .addAnnotatedClass(Owner.class)
-                .addAnnotatedClass(Pet.class);
+
+                .addAnnotatedClass(Lecture.class)
+                .addAnnotatedClass(Subject.class);
+
         sessionFactory = configuration.buildSessionFactory();
     }
 
