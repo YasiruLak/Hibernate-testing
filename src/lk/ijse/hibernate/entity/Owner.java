@@ -1,6 +1,7 @@
 package lk.ijse.hibernate.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class Owner {
     private String oId;
     private String oName;
 
-    @OneToMany(mappedBy = "owner")
+    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
     private List<Pet> petList = new ArrayList<>();
 
     public Owner() {
@@ -53,7 +54,6 @@ public class Owner {
         return "Owner{" +
                 "oId='" + oId + '\'' +
                 ", oName='" + oName + '\'' +
-                ", petList=" + petList +
                 '}';
     }
 }
